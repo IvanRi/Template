@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,,700');
+$letra:"Roboto", sans-serif;
+
+$color1:white;
+$color2:grey;
+$color3:#f06717;
+$color4:black;
+$color5:rgba(193, 193, 193, 0.5);
+$color6:rgba(193, 193, 193, 0.1);
+
+body{
+	margin:0;
+}
+.contenedor{
+	max-width:1000px;
+	margin:auto;
+
+}
+header{
+	font-family:$letra;
+	background-color:$color4;
+	color:white;
+}
+nav{
+	display:flex;
+	justify-content:space-between;
+	border-bottom:1px solid $color6;
+
+	ul{	
+		list-style: none;
+		display: flex;
+		align-items: center;
+		li{
+		}
+		a{
+			text-decoration: none;
+			padding:15px 15px;
+			font-size: 15px;
+			color: $color5;
+			&:hover{
+				color:$color1;				
+				border-bottom: 2px solid white;
+			}
+		}
+
+	}
+}
+.principal{
+	@extend .contenedor;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:130px;
+	position:relative;
+	h1{
+		font-size:60px ;
+		margin-bottom: 0;
+	}
+	h2{
+		font-weight: 300;
+		color: $color5;
+		max-width: 600px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	a{
+		background-color:$color3;
+		padding:15px 40px;
+		text-decoration: none;
+		color:$color1;
+		font-weight: 700;
+	}
+	.flecha{
+		font-size: 30px;
+		color:$color6;
+		padding:0 5px;
+		border:2px solid $color6;
+		border-radius:50%;
+		position: absolute;
+		bottom:20px;
+
+	}
+
+}
+.section1{
+	@extend .contenedor;
+	font-family:$letra;
+	padding-top:50px;
+	.introduccion{
+		text-align: center;
+		h3{
+			font-size: 30px;
+			font-weight: bold;
+			margin: 0;
+		}
+		p{
+			color:grey;
+			font-weight: 700;
+		}
+	}
+	.description_1{
+		display: flex;
+		flex:1;
+		article{
+			margin:0 25px;
+			text-align: center;
+			padding-bottom: 40px;
+			h4{
+				font-size: 25px;
+				font-weight: bold;
+				margin: 0;
+				margin-top: 20px;
+			}
+			.span{
+				font-size: 60px;
+				width: 100px;
+				height: 100px;
+				border-radius:50%;
+				border:5px solid black;
+				display: flex;
+				justify-content: center;
+				align-items:center;
+				margin: auto;
+				}
+			p{
+				font-size:15px ;
+				line-height: 20px;
+				color: grey;
+			}
+			}		
+		}
+	}
+
+.section2{
+	background-color:black;
+}
+.principal_s2{
+	@extend .contenedor;
+	font-family:$letra;
+	color:white;
+	.imagenes{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		div{
+			margin: 10px;
+		}
+	}
+	.titulo_s2{
+		text-align: center;
+		h4{
+			font-size: 30px;
+			font-weight: bold;
+			margin: 0;
+			padding-top:50px;
+		}
+		p{
+			color: grey;
+			font-weight: bold;
+		}
+	}
+
+}
